@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&family=Raleway:wght@300&display=swap');
+
+.navbar-brand {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.page-header {
+  color: #ffffff !important;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#subtitle,
+.typed-cursor {
+  font-size: 44px !important;
+  font-weight: 400;
+  text-shadow: 0px 0px 20px rgba(19, 19, 19, 0.514);
+}
