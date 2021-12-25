@@ -30,8 +30,7 @@ var AnimatedRectangle = (function () {
 var canvas;
 var delta = 0;
 var animPaused = false;
-var initialAnimSpeed = 0.008;
-var animSpeed = initialAnimSpeed;
+var animSpeed = 0.008;
 var spawnTime = 0.14;
 var colorTime = 200;
 var rects = Array();
@@ -43,8 +42,6 @@ function setup() {
     canvas.style("z-index", "-1");
 }
 function draw() {
-    delta = 60 / frameRate();
-    animSpeed = delta * initialAnimSpeed;
     animPaused = !focused;
     background("#20212b");
     if (!animPaused)
