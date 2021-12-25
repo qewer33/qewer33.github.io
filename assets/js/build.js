@@ -1,20 +1,3 @@
-var sliderElement = document.getElementById('sections-wrapper'), sliderSlides = sliderElement.querySelectorAll('.section').length, currentSliderScrollPos = 0, slideWidth = 200, slideMaxWidth = sliderSlides * slideWidth;
-function sliderPrev() {
-    var newSliderScrollPos = currentSliderScrollPos - slideWidth;
-    if (newSliderScrollPos < 0) {
-        return;
-    }
-    currentSliderScrollPos = newSliderScrollPos;
-    sliderElement.scrollTo(0, newSliderScrollPos);
-}
-function sliderNext() {
-    var newSliderScrollPos = currentSliderScrollPos + slideWidth;
-    if (newSliderScrollPos >= slideMaxWidth) {
-        return;
-    }
-    currentSliderScrollPos = newSliderScrollPos;
-    sliderElement.scrollTo(0, newSliderScrollPos);
-}
 var AnimatedRectangle = (function () {
     function AnimatedRectangle(c1, rotationOffset1) {
         this.c = color(255);
@@ -45,20 +28,23 @@ var AnimatedRectangle = (function () {
     return AnimatedRectangle;
 }());
 var canvas;
+var delta = 0;
 var animPaused = false;
-var animSpeed = 0.01;
-var spawnTime = 0.1;
+var initialAnimSpeed = 0.008;
+var animSpeed = initialAnimSpeed;
+var spawnTime = 0.14;
 var colorTime = 200;
-var rects = new Array();
+var rects = Array();
 var timer = 0;
 var colorTimer = 0;
 function setup() {
     canvas = createCanvas(windowWidth, windowHeight);
     canvas.position(0, 0);
     canvas.style("z-index", "-1");
-    frameRate(30);
 }
 function draw() {
+    delta = 60 / frameRate();
+    animSpeed = delta * initialAnimSpeed;
     animPaused = !focused;
     background("#20212b");
     if (!animPaused)
@@ -96,8 +82,8 @@ function updateRects() {
     }
 }
 function returnRoundedFPS() {
-    if (frameRate() < 30 && frameRate() > 25) {
-        return 30;
+    if (frameRate() < 60 && frameRate() > 55) {
+        return 60;
     }
     else {
         return Math.ceil(frameRate());
