@@ -1,40 +1,42 @@
 var Particle = (function () {
-    function Particle(x1, y1) {
+    function Particle(p1, x1, y1) {
         this.opacity = 0;
-        this.c = color(255, 0, 0);
+        this.p = p1;
         this.x = x1;
         this.y = y1;
         this.startX = this.x;
         this.startY = this.y;
-        this.d = Math.ceil(random(1, 11));
+        this.d = Math.ceil(this.p.random(1, 11));
+        this.c = this.p.color(255, 0, 0);
         this.off = this.y;
-        this.increment = random(0.0005, 0.0015);
+        this.increment = this.p.random(0.0005, 0.0015);
     }
     Particle.prototype.display = function () {
         this.move();
         this.updateOpacity();
-        fill(this.c);
-        noStroke();
-        ellipse(this.x, this.y, this.d, this.d);
+        this.p.fill(this.c);
+        this.p.noStroke();
+        this.p.ellipse(this.x, this.y, this.d, this.d);
     };
     Particle.prototype.move = function () {
         this.x++;
         if (this.off == this.y)
-            this.initialNoise = noise(this.off);
-        this.y = Math.ceil(this.startY + (noise(this.off) * height - this.initialNoise * height));
+            this.initialNoise = this.p.noise(this.off);
+        this.y = Math.ceil(this.startY + (this.p.noise(this.off) * this.p.height - this.initialNoise * this.p.height));
         this.off += this.increment;
     };
     Particle.prototype.updateOpacity = function () {
-        this.opacity = Math.ceil(map(this.x, 0, width, 0, 255));
+        this.opacity = Math.ceil(this.p.map(this.x, 0, this.p.width, 0, 255));
     };
     return Particle;
 }());
 var ParticleSystem = (function () {
-    function ParticleSystem(particleXOff1, particleYOff1, hueIncrement1) {
+    function ParticleSystem(p1, particleXOff1, particleYOff1, hueIncrement1) {
         this.particles = [];
         this.spawnSeconds = 0.1;
         this.spawnTimer = 0;
         this.hue = 0;
+        this.p = p1;
         this.particleXOff = particleXOff1;
         this.particleYOff = particleYOff1;
         this.hueIncrement = hueIncrement1;
@@ -46,52 +48,56 @@ var ParticleSystem = (function () {
     ParticleSystem.prototype.spawnParticles = function () {
         this.spawnTimer++;
         if (this.spawnTimer > 60 * this.spawnSeconds) {
-            this.particles.push(new Particle(this.particleXOff, height / 2 + this.particleYOff));
+            this.particles.push(new Particle(this.p, this.particleXOff, this.p.height / 2 + this.particleYOff));
             this.spawnTimer = 0;
         }
     };
     ParticleSystem.prototype.updateParticles = function () {
-        colorMode(HSB, 360, 100, 100);
+        this.p.colorMode(this.p.HSB, 360, 100, 100);
         this.hue += this.hueIncrement;
         if (this.hue > 360)
             this.hue = 0;
         for (var i = 0; i < this.particles.length; i++) {
             this.particles[i].display();
-            this.particles[i].c = color(this.hue, 100, 100, this.particles[i].opacity);
-            if (this.particles[i].x > width)
+            this.particles[i].c = this.p.color(this.hue, 100, 100, this.particles[i].opacity);
+            if (this.particles[i].x > this.p.width)
                 this.particles.splice(i, 1);
         }
-        colorMode(RGB, 255);
+        this.p.colorMode(this.p.RGB, 255);
     };
     return ParticleSystem;
 }());
-var canvas;
-var system1;
-var system2;
-var system3;
-function setup() {
-    canvas = createCanvas(windowWidth, windowHeight);
-    canvas.position(0, 0);
-    canvas.style("z-index", "-1");
-    pixelDensity(1);
-    background(0);
-    system1 = new ParticleSystem(0, int(random(-100, 100)), 0.1);
-    system2 = new ParticleSystem(0, int(random(-100, 100)), 0.3);
-    system3 = new ParticleSystem(0, int(random(-100, 100)), 0.05);
-}
-function draw() {
-    fill(0, random(15, 35));
-    rect(0, 0, width, height);
-    system1.display();
-    system2.display();
-    system3.display();
-    fill(0);
-    textSize(15);
-    rect(15, 13, textWidth("60 FPS"), 15);
-    fill(255);
-    text(Math.ceil(frameRate()) + " FPS", 15, 25);
-}
-function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
-}
+var _this = this;
+var sketch = function (p) {
+    _this.canvas;
+    _this.system1;
+    _this.system2;
+    _this.system3;
+    p.setup = function () {
+        _this.canvas = p.createCanvas(p.windowWidth, p.windowHeight);
+        _this.canvas.position(0, 0);
+        _this.canvas.style("z-index", "-1");
+        p.pixelDensity(1);
+        p.background(0);
+        _this.system1 = new ParticleSystem(p, 0, Math.ceil(p.random(-100, 100)), 0.1);
+        _this.system2 = new ParticleSystem(p, 0, Math.ceil(p.random(-100, 100)), 0.3);
+        _this.system3 = new ParticleSystem(p, 0, Math.ceil(p.random(-100, 100)), 0.05);
+    };
+    p.draw = function () {
+        p.fill(0, p.random(15, 35));
+        p.rect(0, 0, p.width, p.height);
+        _this.system1.display();
+        _this.system2.display();
+        _this.system3.display();
+        p.fill(0);
+        p.textSize(15);
+        p.rect(15, 13, p.textWidth("60 FPS"), 15);
+        p.fill(255);
+        p.text(Math.ceil(p.frameRate()) + " FPS", 15, 25);
+    };
+    p.windowResized = function () {
+        p.resizeCanvas(p.windowWidth, p.windowHeight);
+    };
+};
+new p5(sketch);
 //# sourceMappingURL=build.js.map
