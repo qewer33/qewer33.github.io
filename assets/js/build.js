@@ -60,7 +60,7 @@ var ParticleSystem = (function () {
             this.hue = 0;
         for (var i = 0; i < this.particles.length; i++) {
             this.particles[i].display();
-            this.particles[i].c = this.p.color(map(this.hue - this.hueIncrement, -this.hueIncrement, 360 - this.hueIncrement, 0, 360), 70, 100, this.particles[i].opacity);
+            this.particles[i].c = this.p.color(this.p.map(this.hue - this.hueIncrement, -this.hueIncrement, 360 - this.hueIncrement, 0, 360), 70, 100, this.particles[i].opacity);
             if (this.particles[i].x > this.p.width)
                 this.particles.splice(i, 1);
         }
