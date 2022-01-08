@@ -6,7 +6,7 @@ var Particle = (function () {
         this.y = y1;
         this.startX = this.x;
         this.startY = this.y;
-        this.d = Math.ceil(this.p.random(1, 11));
+        this.d = Math.ceil(this.p.random(1, 20));
         this.c = this.p.color(255, 0, 0);
         this.off = this.y;
         this.increment = this.p.random(0.0005, 0.0015);
@@ -16,7 +16,7 @@ var Particle = (function () {
         this.updateOpacity();
         this.p.fill(this.c);
         this.p.noStroke();
-        this.p.ellipse(this.x, this.y, this.d, this.d);
+        this.p.rect(this.x, this.y, this.d, this.d);
     };
     Particle.prototype.move = function () {
         this.x++;
@@ -33,7 +33,7 @@ var Particle = (function () {
 var ParticleSystem = (function () {
     function ParticleSystem(p1, particleXOff1, particleYOff1, hueIncrement1) {
         this.particles = [];
-        this.spawnSeconds = 0.1;
+        this.spawnSeconds = 0.3;
         this.spawnTimer = 0;
         this.hue = 0;
         this.p = p1;
@@ -49,6 +49,7 @@ var ParticleSystem = (function () {
         this.spawnTimer++;
         if (this.spawnTimer > 60 * this.spawnSeconds) {
             this.particles.push(new Particle(this.p, this.particleXOff, this.p.height / 2 + this.particleYOff));
+            this.particles[this.particles.length - 1].c = this.p.color(this.hue, 80, 100, this.particles[this.particles.length - 1].opacity);
             this.spawnTimer = 0;
         }
     };
@@ -59,7 +60,7 @@ var ParticleSystem = (function () {
             this.hue = 0;
         for (var i = 0; i < this.particles.length; i++) {
             this.particles[i].display();
-            this.particles[i].c = this.p.color(this.hue, 100, 100, this.particles[i].opacity);
+            this.particles[i].c = this.p.color(this.hue, 70, 100, this.particles[i].opacity);
             if (this.particles[i].x > this.p.width)
                 this.particles.splice(i, 1);
         }
@@ -79,17 +80,17 @@ var sketch = function (p) {
         _this.canvas.style("z-index", "-1");
         p.pixelDensity(1);
         p.background(0);
-        _this.system1 = new ParticleSystem(p, 0, Math.ceil(p.random(-100, 100)), 0.1);
-        _this.system2 = new ParticleSystem(p, 0, Math.ceil(p.random(-100, 100)), 0.3);
-        _this.system3 = new ParticleSystem(p, 0, Math.ceil(p.random(-100, 100)), 0.05);
+        _this.system1 = new ParticleSystem(p, -200, Math.ceil(p.random(-100, 100)), 0.1);
+        _this.system2 = new ParticleSystem(p, -20, Math.ceil(p.random(-100, 100)), 0.3);
+        _this.system3 = new ParticleSystem(p, -350, Math.ceil(p.random(-100, 100)), 0.05);
     };
     p.draw = function () {
-        p.fill(0, p.random(15, 35));
+        p.fill(45, 60);
         p.rect(0, 0, p.width, p.height);
         _this.system1.display();
         _this.system2.display();
         _this.system3.display();
-        p.fill(0);
+        p.fill(45);
         p.textSize(15);
         p.rect(15, 13, p.textWidth("60 FPS"), 15);
         p.fill(255);
