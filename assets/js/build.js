@@ -55,12 +55,12 @@ var ParticleSystem = (function () {
     };
     ParticleSystem.prototype.updateParticles = function () {
         this.p.colorMode(this.p.HSB, 360, 100, 100);
-        this.hue += this.hueIncrement;
+        this.hue += 0.15;
         if (this.hue > 360)
             this.hue = 0;
         for (var i = 0; i < this.particles.length; i++) {
             this.particles[i].display();
-            this.particles[i].c = this.p.color(this.hue, 70, 100, this.particles[i].opacity);
+            this.particles[i].c = this.p.color(map(this.hue - this.hueIncrement, -this.hueIncrement, 360 - this.hueIncrement, 0, 360), 70, 100, this.particles[i].opacity);
             if (this.particles[i].x > this.p.width)
                 this.particles.splice(i, 1);
         }
@@ -80,9 +80,9 @@ var sketch = function (p) {
         _this.canvas.style("z-index", "-1");
         p.pixelDensity(1);
         p.background(0);
-        _this.system1 = new ParticleSystem(p, -200, Math.ceil(p.random(-100, 100)), 0.1);
-        _this.system2 = new ParticleSystem(p, -20, Math.ceil(p.random(-100, 100)), 0.3);
-        _this.system3 = new ParticleSystem(p, -350, Math.ceil(p.random(-100, 100)), 0.05);
+        _this.system1 = new ParticleSystem(p, -200, Math.ceil(p.random(-100, 100)), 0);
+        _this.system2 = new ParticleSystem(p, -20, Math.ceil(p.random(-100, 100)), 30);
+        _this.system3 = new ParticleSystem(p, -350, Math.ceil(p.random(-100, 100)), 15);
     };
     p.draw = function () {
         p.fill(45, 60);

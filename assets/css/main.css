@@ -4,7 +4,7 @@
 :root {
     --main-font: "JetBrains Mono";
     --foreground: white;
-    --foreground-dimmed: rgba(255, 255, 255, 0.6);
+    --foreground-dimmed: rgba(255, 255, 255, 0.5);
     --accent: #2f66ff;
 }
 
