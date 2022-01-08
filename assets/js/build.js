@@ -57,11 +57,11 @@ var ParticleSystem = (function () {
     ParticleSystem.prototype.updateParticles = function () {
         this.p.colorMode(this.p.HSB, 360, 100, 100);
         this.hue += 0.15;
-        if (this.hue > 360 + this.hueOffset)
+        if (this.hue > 360)
             this.hue = 0;
         for (var i = 0; i < this.particles.length; i++) {
             this.particles[i].display();
-            this.particles[i].c = this.p.color(this.hue - this.hueOffset, 70, 100, this.particles[i].opacity);
+            this.particles[i].c = this.p.color(this.hue, 70, 100, this.particles[i].opacity);
             if (this.particles[i].x > this.p.width)
                 this.particles.splice(i, 1);
         }
