@@ -31,7 +31,7 @@ var Particle = (function () {
     return Particle;
 }());
 var ParticleSystem = (function () {
-    function ParticleSystem(p1, particleXOff1, particleYOff1, hueIncrement1) {
+    function ParticleSystem(p1, particleXOff1, particleYOff1, hueOffset1) {
         this.particles = [];
         this.spawnSeconds = 0.3;
         this.spawnTimer = 0;
@@ -39,7 +39,8 @@ var ParticleSystem = (function () {
         this.p = p1;
         this.particleXOff = particleXOff1;
         this.particleYOff = particleYOff1;
-        this.hueIncrement = hueIncrement1;
+        this.hueOffset = hueOffset1;
+        this.hue = this.hueOffset;
     }
     ParticleSystem.prototype.display = function () {
         this.updateParticles();
@@ -56,11 +57,11 @@ var ParticleSystem = (function () {
     ParticleSystem.prototype.updateParticles = function () {
         this.p.colorMode(this.p.HSB, 360, 100, 100);
         this.hue += 0.15;
-        if (this.hue > 360)
+        if (this.hue > 360 + this.hueOffset)
             this.hue = 0;
         for (var i = 0; i < this.particles.length; i++) {
             this.particles[i].display();
-            this.particles[i].c = this.p.color(this.p.map(this.hue - this.hueIncrement, -this.hueIncrement, 360 - this.hueIncrement, 0, 360), 70, 100, this.particles[i].opacity);
+            this.particles[i].c = this.p.color(this.hue - this.hueOffset, 70, 100, this.particles[i].opacity);
             if (this.particles[i].x > this.p.width)
                 this.particles.splice(i, 1);
         }
