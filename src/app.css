@@ -1,0 +1,88 @@
+@import "@fontsource/jetbrains-mono/300.css";
+@import "@fontsource/jetbrains-mono/400.css";
+@import "@fontsource/jetbrains-mono/500.css";
+@import "@fontsource/jetbrains-mono/600.css";
+@import "@fontsource/jetbrains-mono/700.css";
+@import "@fontsource/jetbrains-mono/800.css";
+
+:root {
+    font-family: "JetBrains Mono", Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+
+    --background-primary: #1d1d1d;
+    --background-secondary: rgb(49, 49, 49);
+    --accent-primary: #0578f0;
+    --accent-secondary: #0060c7;
+    --text-primary: #ffffff;
+    --text-secondary: #ffffff83;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-primary);
+}
+
+canvas {
+    position: fixed !important;
+    left: 0;
+    top: 0;
+}
+
+p,
+ul,
+li,
+h1 {
+    margin: 0;
+    padding: 0;
+    color: var(--text-primary);
+}
+
+a {
+    font-family: "JetBrains Mono";
+    color: var(--accent-primary);
+    transition: 250ms;
+}
+
+a:hover {
+    color: var(--accent-secondary);
+}
+
+.button {
+    padding: 15px 30px;
+    font-family: "JetBrains Mono";
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: var(--text-primary);
+    background-color: var(--accent-primary);
+    border: none;
+    outline: none;
+    transform: skew(-8deg);
+    transition: 250ms;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: var(--accent-secondary);
+    transform: skew(-12deg);
+}
+
+.button a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.button a:hover {
+    color: var(--text-primary);
+}
