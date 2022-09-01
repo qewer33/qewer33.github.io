@@ -1,11 +1,12 @@
 <script>
+    import logo from "/src/assets/png/logo_no_bg.png";
 </script>
 
 <main>
     <span id="dot" />
 
     <div id="content">
-        <img src="/src/assets/png/logo_no_bg.png" alt="logo" />
+        <img src={logo} alt="logo" />
         <div id="text">
             <p>
                 this website is designed by
@@ -15,7 +16,7 @@
             </p>
             <p>
                 you can find the source code
-                <a href="https://lynithdev.github.io">here on github</a>
+                <a href="https://github.com/qewer33/qewer33.github.io">here on github</a>
             </p>
             <p>
                 licensed under the
