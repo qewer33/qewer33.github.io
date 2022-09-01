@@ -3,7 +3,7 @@
         {
             "name": "Exquisite",
             "description": "A new, unique and intuitive window management solution for KDE Plasma!",
-            "thumbnailImage": "/assets/png/exquisite.png",
+            "thumbnailImage": "https://raw.githubusercontent.com/qewer33/qewer33.github.io/main/src/assets/png/exquisite.png",
             "thumbnailScale": "0.6",
             "url": "https://github.com/qewer33/Exquisite",
             "language": "QML"
@@ -11,7 +11,7 @@
         {
             "name": "Leaf KDE Plasma Theme",
             "description": "Leaf is a comfy, forest themed, green accent light & dark theme set for your KDE Plasma desktop",
-            "thumbnailImage": "/assets/png/leaf.png",
+            "thumbnailImage": "https://raw.githubusercontent.com/qewer33/qewer33.github.io/main/src/assets/png/leaf.png",
             "thumbnailScale": "0.35",
             "url": "https://github.com/qewer33/leaf-kde",
             "language": ""
@@ -19,7 +19,7 @@
         {
             "name": "Clear Clock",
             "description": "ClearClock is a simple, elegant and configurable date/time display for your KDE Plasma desktop",
-            "thumbnailImage": "/assets/png/clear_clock.png",
+            "thumbnailImage": "https://raw.githubusercontent.com/qewer33/qewer33.github.io/main/src/assets/png/clear_clock.png",
             "thumbnailScale": "0.95",
             "url": "https://github.com/qewer33/ClearClock",
             "language": "QML"
@@ -27,7 +27,7 @@
         {
             "name": "ascii_table_creator_3000",
             "description": "An interactive Ruby program that allows you to create text tables right in your terminal!",
-            "thumbnailImage": "/assets/png/ascii_table_creator_3000.png",
+            "thumbnailImage": "https://raw.githubusercontent.com/qewer33/qewer33.github.io/main/src/assets/png/ascii_table_creator_3000.png",
             "thumbnailScale": "1.2",
             "url": "https://github.com/qewer33/ascii_table_creator_3000",
             "language": "Ruby"
@@ -35,7 +35,7 @@
         {
             "name": "sus runner",
             "description": "A Chrome dino game clone, except it's kinda sus... Made with Rust and Macroquad to try out gamedev in Rust",
-            "thumbnailImage": "/assets/png/sus_runner.png",
+            "thumbnailImage": "https://raw.githubusercontent.com/qewer33/qewer33.github.io/main/src/assets/png/sus_runner.png",
             "thumbnailScale": "1.4",
             "url": "https://sus.qewer.dev/",
             "language": "Rust"
@@ -43,7 +43,7 @@
         {
             "name": "This Website",
             "description": "This website is designed by Lynith and developed from scratch by me using Svelte and p5.js",
-            "thumbnailImage": "/assets/png/website.png",
+            "thumbnailImage": "https://raw.githubusercontent.com/qewer33/qewer33.github.io/main/src/assets/png/website.png",
             "thumbnailScale": "0.35",
             "url": "https://github.com/qewer33/personal-website",
             "language": "Svelte"
