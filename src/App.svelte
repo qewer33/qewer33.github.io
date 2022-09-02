@@ -7,19 +7,19 @@
 
     onMount(() => {
         const observer = new IntersectionObserver((e) => {
-        for (let i = 0; i < e.length; i++) {
-            if (e[i].isIntersecting) setTimeout(() => {
-            // if (e[i].intersectionRatio > 0) setTimeout(() => {
-                e[i].target.classList.add("animated");
-                observer.unobserve(e[i].target);
-            }, i * 350);
-        };
-    });
+            for (let i = 0; i < e.length; i++) {
+                if (e[i].isIntersecting)
+                    setTimeout(() => {
+                        // if (e[i].intersectionRatio > 0) setTimeout(() => {
+                        e[i].target.classList.add("animated");
+                        observer.unobserve(e[i].target);
+                    }, i * 350);
+            }
+        });
 
-        document.querySelectorAll('[data-animate]').forEach((e) => observer.observe(e));
+        document.querySelectorAll("[data-animate]").forEach((e) => observer.observe(e));
         scrollBy(0, 1);
-    })
-
+    });
 </script>
 
 <main>
@@ -33,9 +33,9 @@
     :global([data-animate]) {
         opacity: 0;
         position: relative;
-        left: -50%;
-        transition-duration: 1s;
-        transition-delay: 0.2s;
+        left: -30%;
+        transition-duration: 350ms;
+        transition-delay: 50ms;
     }
 
     :global(.animated) {
@@ -46,8 +46,8 @@
     :global([data-animate="fade"]) {
         opacity: 0;
         position: relative;
-        transition-duration: 1s;
-        transition-delay: 0.2s;
+        transition-duration: 500ms;
+        transition-delay: 100ms;
     }
 
     :global(.animated[data-animate="fade"]) {

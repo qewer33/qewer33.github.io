@@ -3,7 +3,6 @@
     import github from "/src/assets/svg/github.svg";
     import discord from "/src/assets/svg/discord.svg";
     import reddit from "/src/assets/svg/reddit.svg";
-
 </script>
 
 <main>
@@ -16,51 +15,60 @@
         <p id="title-name" data-animate>qewer</p>
         <p id="title-aka" data-animate>aka. qewer33, qewer3322, qewer3333</p>
 
-        <ul id="title-list">
-            <li data-animate>developer</li>
-            <li data-animate>designer</li>
-            <li data-animate>linux enthusiast</li>
+        <ul id="title-list" data-animate>
+            <li>developer</li>
+            <li>designer</li>
+            <li>linux enthusiast</li>
         </ul>
 
         <div class="button" data-animate><a href="#projects">PROJECTS</a></div>
 
-        <div id="title-socials">
-            <a href="https://github.com/qewer33" data-animate><img src={github} alt="github" /></a>
-            <span data-animate><img src={discord} alt="discord" on:click={(e) => {
-                navigator.clipboard.writeText("Qewer#8693");
-                const tooltip = document.createElement("div");
-                tooltip.innerText = "COPIED TO CLIPBOARD";
-                tooltip.style.position = "absolute";
-                // @ts-ignore
-                const targetBox = e.target.getBoundingClientRect();
+        <div id="title-socials" data-animate>
+            <a href="https://github.com/qewer33"><img src={github} alt="github" /></a>
+            <span
+                ><img
+                    src={discord}
+                    alt="discord"
+                    on:click={(e) => {
+                        navigator.clipboard.writeText("Qewer#8693");
+                        const tooltip = document.createElement("div");
+                        tooltip.innerText = "COPIED TO CLIPBOARD";
+                        tooltip.style.position = "absolute";
+                        // @ts-ignore
+                        const targetBox = e.target.getBoundingClientRect();
 
-                tooltip.style.transition = "0.3s";
-                tooltip.style.opacity = "0";
-                tooltip.style.padding = "10px";
-                tooltip.style.color = "white";
-                tooltip.style.background = "rgba(40, 40, 40, 0.95)";
-                tooltip.style.transform = "skew(-12deg)";
-                document.body.appendChild(tooltip);
+                        tooltip.style.transition = "0.3s";
+                        tooltip.style.opacity = "0";
+                        tooltip.style.padding = "10px";
+                        tooltip.style.color = "white";
+                        tooltip.style.background = "rgba(40, 40, 40, 0.95)";
+                        tooltip.style.transform = "skew(-12deg)";
+                        document.body.appendChild(tooltip);
 
-                tooltip.style.left = targetBox.left + targetBox.width / 2 - tooltip.getBoundingClientRect().width / 2 + "px";
-                tooltip.style.top = targetBox.top - tooltip.getBoundingClientRect().height + "px";
-                setTimeout(() => { tooltip.style.opacity = "1"; }, 100);
-                setTimeout(() => { 
-                    tooltip.style.opacity = "0"; 
-                    setTimeout(() => { document.body.removeChild(tooltip) }, 300);
-                }, 3000);
-                
-            }} /></span>
-            <a href="https://www.reddit.com/user/qewer3333" data-animate><img src={reddit} alt="reddit" /></a>
+                        tooltip.style.left =
+                            targetBox.left + targetBox.width / 2 - tooltip.getBoundingClientRect().width / 2 + "px";
+                        tooltip.style.top = targetBox.top - tooltip.getBoundingClientRect().height + "px";
+                        setTimeout(() => {
+                            tooltip.style.opacity = "1";
+                        }, 100);
+                        setTimeout(() => {
+                            tooltip.style.opacity = "0";
+                            setTimeout(() => {
+                                document.body.removeChild(tooltip);
+                            }, 300);
+                        }, 3000);
+                    }}
+                /></span
+            >
+            <a href="https://www.reddit.com/user/qewer3333"><img src={reddit} alt="reddit" /></a>
         </div>
     </div>
 
-    <img src={mouseIcon} alt="mouse" id="scroll-img" data-animate="fade" />
-    <!-- <p data-animate="fade" id="scroll-text">SCROLL FOR MORE</p> -->
+    <img src={mouseIcon} alt="mouse" id="scroll-img" />
+    <p id="scroll-text">SCROLL FOR MORE</p>
 </main>
 
 <style>
-
     main {
         width: 80vw;
         height: 100vh;
@@ -134,7 +142,7 @@
             transform: translateY(0);
         }
         50% {
-            transform: translateY(-15px);
+            transform: translateY(-30px);
         }
         100% {
             transform: translateY(0);
@@ -161,6 +169,9 @@
         }
         50% {
             opacity: 100%;
+        }
+        80% {
+            opacity: 0%;
         }
         100% {
             opacity: 0;
