@@ -30,6 +30,29 @@
 </main>
 
 <style>
+    :global([data-animate]) {
+        opacity: 0;
+        position: relative;
+        left: -50%;
+        transition-duration: 1s;
+        transition-delay: 0.2s;
+    }
+
+    :global(.animated) {
+        opacity: 1;
+        left: 0;
+    }
+
+    :global([data-animate="fade"]) {
+        opacity: 0;
+        position: relative;
+        transition-duration: 1s;
+        transition-delay: 0.2s;
+    }
+
+    :global(.animated[data-animate="fade"]) {
+        opacity: 1;
+    }
     main {
         display: flex;
         flex-direction: column;

@@ -26,8 +26,30 @@
 
         <div id="title-socials">
             <a href="https://github.com/qewer33" data-animate><img src={github} alt="github" /></a>
-            <span data-animate><img src={discord} alt="discord" on:click={() => {
-                    navigator.clipboard.writeText("Qewer#8693");
+            <span data-animate><img src={discord} alt="discord" on:click={(e) => {
+                navigator.clipboard.writeText("Qewer#8693");
+                const tooltip = document.createElement("div");
+                tooltip.innerText = "COPIED TO CLIPBOARD";
+                tooltip.style.position = "absolute";
+                // @ts-ignore
+                const targetBox = e.target.getBoundingClientRect();
+
+                tooltip.style.transition = "0.3s";
+                tooltip.style.opacity = "0";
+                tooltip.style.padding = "10px";
+                tooltip.style.color = "white";
+                tooltip.style.background = "rgba(40, 40, 40, 0.95)";
+                tooltip.style.transform = "skew(-12deg)";
+                document.body.appendChild(tooltip);
+
+                tooltip.style.left = targetBox.left + targetBox.width / 2 - tooltip.getBoundingClientRect().width / 2 + "px";
+                tooltip.style.top = targetBox.top - tooltip.getBoundingClientRect().height + "px";
+                setTimeout(() => { tooltip.style.opacity = "1"; }, 100);
+                setTimeout(() => { 
+                    tooltip.style.opacity = "0"; 
+                    setTimeout(() => { document.body.removeChild(tooltip) }, 300);
+                }, 3000);
+                
             }} /></span>
             <a href="https://www.reddit.com/user/qewer3333" data-animate><img src={reddit} alt="reddit" /></a>
         </div>
@@ -38,29 +60,6 @@
 </main>
 
 <style>
-    :global([data-animate]) {
-        opacity: 0;
-        position: relative;
-        left: -50%;
-        transition-duration: 1s;
-        transition-delay: 0.2s;
-    }
-
-    :global(.animated) {
-        opacity: 1;
-        left: 0;
-    }
-
-    :global([data-animate="fade"]) {
-        opacity: 0;
-        position: relative;
-        transition-duration: 1s;
-        transition-delay: 0.2s;
-    }
-
-    :global(.animated[data-animate="fade"]) {
-        opacity: 1;
-    }
 
     main {
         width: 80vw;
