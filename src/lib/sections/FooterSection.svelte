@@ -12,7 +12,7 @@
                 this website is designed by
                 <a href="https://lynithdev.github.io">lynith</a>
                 and developed by
-                <a href="https://www.qewer.dev">me (qewer)</a>
+                <a href="https://github.com/qewer33">me (qewer)</a>
             </p>
             <p>
                 you can find the source code
