@@ -2,7 +2,7 @@
     export let knowledgeLevel = 0;
 </script>
 
-<main>
+<main data-animate>
     <div id="content">
         <h1><slot name="title" /></h1>
         <div id="progress-bar-bg">
