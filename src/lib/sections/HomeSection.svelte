@@ -24,9 +24,15 @@
         <div class="button"><a href="#projects">PROJECTS</a></div>
 
         <div id="title-socials">
-            <img src={github} alt="github" />
-            <img src={discord} alt="discord" />
-            <img src={reddit} alt="reddit" />
+            <a href="https://github.com/qewer33"><img src={github} alt="github" /></a>
+            <img
+                src={discord}
+                alt="discord"
+                on:click={() => {
+                    navigator.clipboard.writeText("Qewer#8693");
+                }}
+            />
+            <a href="https://www.reddit.com/user/qewer3333"><img src={reddit} alt="reddit" /></a>
         </div>
     </div>
 
