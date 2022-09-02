@@ -47,7 +47,7 @@
     #dot {
         position: relative;
         left: -12px;
-        top: -135px;
+        top: -10%;
         width: 20px;
         height: 20px;
         transform: rotate(45deg);
