@@ -1,0 +1,67 @@
+{
+    "skills": [
+        {
+            "name": "Programming & Software Development",
+            "knowledgeLevel": 85,
+            "labels": [
+                "rust",
+                "ruby",
+                "bash",
+                "qml",
+                "neovim",
+                "vscode"
+            ]
+        },
+        {
+            "name": "Computer Graphics & Creative Coding",
+            "knowledgeLevel": 50,
+            "labels": [
+                "processing",
+                "p5.js"
+            ]
+        },
+        {
+            "name": "Linux & Free Software",
+            "knowledgeLevel": 85,
+            "labels": [
+                "arch linux",
+                "kde",
+                "bash"
+            ]
+        },
+        {
+            "name": "Web Development",
+            "knowledgeLevel": 60,
+            "labels": [
+                "html",
+                "css",
+                "javascript",
+                "svelte"
+            ]
+        },
+        {
+            "name": "Game Development",
+            "knowledgeLevel": 30,
+            "labels": [
+                "godot"
+            ]
+        },
+        {
+            "name": "Computer Aided Design & 3D Printing",
+            "knowledgeLevel": 45,
+            "labels": [
+                "freecad",
+                "kicad",
+                "cura"
+            ]
+        },
+        {
+            "name": "PC Building",
+            "knowledgeLevel": 85,
+            "labels": [
+                "ryzen 5 5600",
+                "radeon rx 6500 xt"
+            ]
+        }
+    ]
+}
