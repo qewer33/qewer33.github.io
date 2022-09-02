@@ -3,44 +3,65 @@
     import github from "/src/assets/svg/github.svg";
     import discord from "/src/assets/svg/discord.svg";
     import reddit from "/src/assets/svg/reddit.svg";
+
 </script>
 
 <main>
     <span id="dot" />
 
     <div id="title-block">
-        <p id="title-hi">
+        <p id="title-hi" data-animate>
             <span style="color: var(--accent-primary);">HI</span> THERE! I'M
         </p>
-        <p id="title-name">qewer</p>
-        <p id="title-aka">aka. qewer33, qewer3322, qewer3333</p>
+        <p id="title-name" data-animate>qewer</p>
+        <p id="title-aka" data-animate>aka. qewer33, qewer3322, qewer3333</p>
 
         <ul id="title-list">
-            <li>developer</li>
-            <li>designer</li>
-            <li>linux enthusiast</li>
+            <li data-animate>developer</li>
+            <li data-animate>designer</li>
+            <li data-animate>linux enthusiast</li>
         </ul>
 
-        <div class="button"><a href="#projects">PROJECTS</a></div>
+        <div class="button" data-animate><a href="#projects">PROJECTS</a></div>
 
         <div id="title-socials">
-            <a href="https://github.com/qewer33"><img src={github} alt="github" /></a>
-            <img
-                src={discord}
-                alt="discord"
-                on:click={() => {
+            <a href="https://github.com/qewer33" data-animate><img src={github} alt="github" /></a>
+            <span data-animate><img src={discord} alt="discord" on:click={() => {
                     navigator.clipboard.writeText("Qewer#8693");
-                }}
-            />
-            <a href="https://www.reddit.com/user/qewer3333"><img src={reddit} alt="reddit" /></a>
+            }} /></span>
+            <a href="https://www.reddit.com/user/qewer3333" data-animate><img src={reddit} alt="reddit" /></a>
         </div>
     </div>
 
-    <img src={mouseIcon} alt="mouse" id="scroll-img" />
-    <p id="scroll-text">SCROLL FOR MORE</p>
+    <img src={mouseIcon} alt="mouse" id="scroll-img" data-animate="fade" />
+    <!-- <p data-animate="fade" id="scroll-text">SCROLL FOR MORE</p> -->
 </main>
 
 <style>
+    :global([data-animate]) {
+        opacity: 0;
+        position: relative;
+        left: -50%;
+        transition-duration: 1s;
+        transition-delay: 0.2s;
+    }
+
+    :global(.animated) {
+        opacity: 1;
+        left: 0;
+    }
+
+    :global([data-animate="fade"]) {
+        opacity: 0;
+        position: relative;
+        transition-duration: 1s;
+        transition-delay: 0.2s;
+    }
+
+    :global(.animated[data-animate="fade"]) {
+        opacity: 1;
+    }
+
     main {
         width: 80vw;
         height: 100vh;
@@ -114,7 +135,7 @@
             transform: translateY(0);
         }
         50% {
-            transform: translateY(-35px);
+            transform: translateY(-15px);
         }
         100% {
             transform: translateY(0);
