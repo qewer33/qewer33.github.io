@@ -11,8 +11,8 @@
     <span id="dot" />
 
     <div id="title-block">
-        <p id="title-name">skills and interests</p>
-        <p id="title-sub">my skills & knowledge as a computer enthusiast and topics I'm interested in</p>
+        <p id="title-name" data-animate>skills and interests</p>
+        <p id="title-sub" data-animate>my skills & knowledge as a computer enthusiast and topics I'm interested in</p>
     </div>
 
     <div id="cards">
