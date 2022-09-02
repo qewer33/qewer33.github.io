@@ -10,7 +10,6 @@
             for (let i = 0; i < e.length; i++) {
                 if (e[i].isIntersecting)
                     setTimeout(() => {
-                        // if (e[i].intersectionRatio > 0) setTimeout(() => {
                         e[i].target.classList.add("animated");
                         observer.unobserve(e[i].target);
                     }, i * 350);
@@ -18,7 +17,7 @@
         });
 
         document.querySelectorAll("[data-animate]").forEach((e) => observer.observe(e));
-        scrollBy(0, 1);
+        scrollTo(0, 0);
     });
 </script>
 
@@ -53,6 +52,7 @@
     :global(.animated[data-animate="fade"]) {
         opacity: 1;
     }
+
     main {
         display: flex;
         flex-direction: column;
