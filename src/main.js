@@ -5,6 +5,8 @@ const app = new App({
   target: document.getElementById('app')
 })
 
+// window.scrollTo(0, 0);
+
 const observer = new IntersectionObserver((e) => {
     for (let i = 0; i < e.length; i++) {
         if (e[i].isIntersecting) setTimeout(() => {

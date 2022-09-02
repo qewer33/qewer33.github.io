@@ -7,7 +7,7 @@
     export let language = "";
 </script>
 
-<main>
+<main  data-animate>
     <button />
     <img src={thumbnailImage} alt="" style="transform: translate(-50%, -50%) scale({thumbnailScale});" />
 
