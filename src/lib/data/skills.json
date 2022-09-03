@@ -51,6 +51,7 @@
             "knowledgeLevel": 45,
             "labels": [
                 "freecad",
+                "openscad",
                 "kicad",
                 "cura"
             ]
