@@ -11,7 +11,7 @@
 
     <div id="title-block">
         <p data-animate id="title-name">projects</p>
-        <p data-animate id="title-sub">here are my most notable projects, hover over them to get more info!</p>
+        <p data-animate id="title-sub">here are my most notable projects, hover or tap over them to get more info!</p>
     </div>
 
     <div id="cards">

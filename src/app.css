@@ -16,6 +16,12 @@
     --text-primary: #ffffff;
     --text-secondary: #ffffff83;
 
+    --fsize-title: 32px;
+    --fsize-text-heading: 28px;
+    --fsize-text-body: 25px;
+    --fsize-text-sub: 23px;
+    --fsize-text-small: 20px;
+
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;

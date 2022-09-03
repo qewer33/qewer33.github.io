@@ -10,7 +10,7 @@
         </div>
         <div id="progress-bar-labels">
             <p style="text-align: left;">BEGINNER</p>
-            <p style="text-align: center;">INTERMIDATE</p>
+            <p style="text-align: center;">INTERMEDIATE</p>
             <p style="text-align: right;">ADVANCED</p>
         </div>
         <div id="labels"><slot name="labels" /></div>

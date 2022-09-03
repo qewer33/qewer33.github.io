@@ -15,10 +15,12 @@ function draw() {
     background(30, 200);
     backgroundSystem.display(0, width, 0, height);
     backgroundSystem2.display(0, width, 0, height);
-    fill(40, 150);
-    noStroke();
-    circle(mouseX, mouseY, 300);
-    mouseSystem.display(map(mouseX, 0, width, width, 0) - 120, map(mouseX, 0, width, width, 0) + 120, mouseY - 120, mouseY + 120);
+    if (windowWidth > 800) {
+        fill(40, 150);
+        noStroke();
+        circle(mouseX, mouseY, 300);
+        mouseSystem.display(map(mouseX, 0, width, width, 0) - 120, map(mouseX, 0, width, width, 0) + 120, mouseY - 120, mouseY + 120);
+    }
 }
 
 class ParticleSystem {
