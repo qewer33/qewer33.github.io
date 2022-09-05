@@ -13,14 +13,6 @@
             ]
         },
         {
-            "name": "Computer Graphics & Creative Coding",
-            "knowledgeLevel": 50,
-            "labels": [
-                "processing",
-                "p5.js"
-            ]
-        },
-        {
             "name": "Linux & Free Software",
             "knowledgeLevel": 85,
             "labels": [
@@ -30,8 +22,17 @@
             ]
         },
         {
+            "name": "Graphic Design & UI/UX",
+            "knowledgeLevel": 65,
+            "labels": [
+                "figma",
+                "inkscape",
+                "gimp"
+            ]
+        },
+        {
             "name": "Web Development",
-            "knowledgeLevel": 60,
+            "knowledgeLevel": 55,
             "labels": [
                 "html",
                 "css",
@@ -40,10 +41,11 @@
             ]
         },
         {
-            "name": "Game Development",
-            "knowledgeLevel": 30,
+            "name": "Computer Graphics & Creative Coding",
+            "knowledgeLevel": 50,
             "labels": [
-                "godot"
+                "processing",
+                "p5.js"
             ]
         },
         {
@@ -54,6 +56,13 @@
                 "openscad",
                 "kicad",
                 "cura"
+            ]
+        },
+        {
+            "name": "Game Development",
+            "knowledgeLevel": 35,
+            "labels": [
+                "godot"
             ]
         },
         {
