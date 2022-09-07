@@ -24,7 +24,7 @@
         justify-content: center;
         padding: 15px 30px;
         font-family: "JetBrains Mono";
-        font-size: 20px;
+        font-size: var(--fsize-text-body);
         font-weight: 800;
         letter-spacing: 3px;
         color: var(--text-primary);

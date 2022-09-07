@@ -15,7 +15,7 @@
         justify-content: center;
         padding: 15px 20px;
         font-family: "JetBrains Mono";
-        font-size: 20px;
+        font-size: var(--fsize-text-body);
         font-weight: 800;
         letter-spacing: 3px;
         color: var(--text-primary);
@@ -28,5 +28,11 @@
         width: 28px;
         height: 28px;
         margin-right: 15px;
+    }
+
+    @media only screen and (max-width: 800px) {
+        main {
+            padding: 10px 15px;
+        }
     }
 </style>

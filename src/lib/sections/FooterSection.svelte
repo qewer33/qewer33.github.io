@@ -65,7 +65,7 @@
 
     p,
     a {
-        font-size: 20px;
+        font-size: var(--fsize-text-body);
     }
 
     @media only screen and (max-width: 800px) {

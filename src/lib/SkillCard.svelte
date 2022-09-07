@@ -73,4 +73,14 @@
         margin-top: 20px;
         margin-bottom: -10px;
     }
+
+    @media only screen and (max-width: 800px) {
+        h1 {
+            font-size: var(--fsize-text-subheading);
+        }
+
+        p {
+            font-size: var(--fsize-text-small);
+        }
+    }
 </style>

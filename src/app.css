@@ -16,11 +16,11 @@
     --text-primary: #ffffff;
     --text-secondary: #ffffff83;
 
-    --fsize-title: 32px;
-    --fsize-text-heading: 28px;
-    --fsize-text-body: 25px;
-    --fsize-text-sub: 23px;
-    --fsize-text-small: 20px;
+    --fsize-title: 68px;
+    --fsize-text-heading: 26px;
+    --fsize-text-subheading: 22px;
+    --fsize-text-body: 17px;
+    --fsize-text-small: 14px;
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -67,7 +67,7 @@ a:hover {
 .button {
     padding: 15px 30px;
     font-family: "JetBrains Mono";
-    font-size: 20px;
+    font-size: var(--fsize-text-body);
     font-weight: 800;
     letter-spacing: 3px;
     color: var(--text-primary);
@@ -91,4 +91,10 @@ a:hover {
 
 .button a:hover {
     color: var(--text-primary);
+}
+
+@media only screen and (max-width: 800px) {
+    :root  {
+        --fsize-title: 65px;
+    }
 }

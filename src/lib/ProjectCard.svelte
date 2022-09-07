@@ -7,7 +7,7 @@
     export let language = "";
 </script>
 
-<main  data-animate>
+<main data-animate>
     <button />
     <img src={thumbnailImage} alt="" style="transform: translate(-50%, -50%) scale({thumbnailScale});" />
 
@@ -87,14 +87,16 @@
     }
 
     p {
-        font-size: 18px;
+        font-size: var(--fsize-text-body);
         margin-bottom: 20px;
     }
 
     @media only screen and (max-width: 800px) {
-        h1,
-        p {
+        h1 {
             word-break: break-all;
+        }
+
+        p {
             word-wrap: break-word;
         }
     }

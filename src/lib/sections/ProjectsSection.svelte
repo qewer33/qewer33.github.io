@@ -55,13 +55,13 @@
     }
 
     #title-name {
-        font-size: 72px;
+        font-size: var(--fsize-title);
         margin-top: -20px;
         margin-left: -3px;
     }
 
     #title-sub {
-        font-size: 20px;
+        font-size: var(--fsize-text-body);
         color: var(--text-secondary);
     }
 
@@ -81,6 +81,7 @@
 
         #title-block {
             margin-left: 10px;
+            padding: 20px;
         }
 
         #cards {

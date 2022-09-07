@@ -93,20 +93,20 @@
     }
 
     #title-hi {
-        font-size: 19px;
+        font-size: var(--fsize-text-body);
         font-weight: 800;
         letter-spacing: 1px;
     }
 
     #title-name {
-        font-size: 72px;
+        font-size: var(--fsize-title);
         margin-top: -20px;
         margin-left: -3px;
     }
 
     #title-aka {
         color: var(--text-secondary);
-        font-size: 18px;
+        font-size: var(--fsize-text-small);
         margin-bottom: 15px;
         margin-left: 5px;
     }
@@ -118,7 +118,7 @@
 
     #title-list li {
         color: var(--accent-primary);
-        font-size: 24px;
+        font-size: var(--fsize-text-subheading);
         margin-top: 5px;
     }
 
@@ -195,7 +195,7 @@
     }
 
     .button {
-        width: 120px;
+        width: 100px;
     }
 
     @media only screen and (max-width: 800px) {
