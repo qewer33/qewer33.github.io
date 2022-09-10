@@ -75,6 +75,10 @@
     }
 
     @media only screen and (max-width: 800px) {
+        main {
+            transform: none;
+        }
+
         h1 {
             font-size: var(--fsize-text-subheading);
         }

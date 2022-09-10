@@ -67,7 +67,7 @@
 
     img {
         position: absolute;
-        z-index: -1;
+        z-index: 0;
         top: 50%;
         left: 50%;
         transition: 250ms;
@@ -92,6 +92,10 @@
     }
 
     @media only screen and (max-width: 800px) {
+        main {
+            transform: none;
+        }
+
         h1 {
             word-break: break-all;
         }

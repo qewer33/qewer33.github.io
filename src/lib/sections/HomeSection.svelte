@@ -202,12 +202,11 @@
         main {
             width: 100vw;
             border: none;
+            justify-content: center;
         }
 
         #title-block {
-            position: absolute;
-            left: 0;
-            right: 0;
+            margin-left: 0;
         }
 
         #dot,

@@ -97,4 +97,12 @@ a:hover {
     :root  {
         --fsize-title: 65px;
     }
+
+    button {
+        transform: none;
+    }
+
+    button:hover {
+        transform: none;
+    }
 }
