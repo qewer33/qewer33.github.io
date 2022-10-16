@@ -7,7 +7,7 @@
     let skills = skillsJSON.skills;
 </script>
 
-<main id="projects">
+<main class="section" id="skills">
     <span id="dot" />
 
     <div id="title-block">

@@ -13,9 +13,9 @@
 
     <div id="content">
         <div style="display: flex;">
-            <div class="button" style="transform: none;">
-                <a href={visitURL} target="_blank" rel="noopener noreferrer"> VISIT </a>
-            </div>
+            <a class="button" style="transform: none;" href={visitURL} target="_blank" rel="noopener noreferrer">
+                VISIT
+            </a>
             {#if language !== ""}
                 <LanguageLabel bind:language />
             {/if}

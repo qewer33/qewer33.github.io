@@ -22,6 +22,8 @@
     --fsize-text-body: 17px;
     --fsize-text-small: 14px;
 
+    --accent-pink: #c53b70;
+
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -78,23 +80,20 @@ a:hover {
     transition: 250ms;
 }
 
-.button:hover {
-    cursor: pointer;
-    background-color: var(--accent-secondary);
-    transform: skew(-12deg);
-}
-
-.button a {
+.button {
     color: var(--text-primary);
     text-decoration: none;
 }
 
-.button a:hover {
+.button:hover {
+    cursor: pointer;
     color: var(--text-primary);
+    background-color: var(--accent-secondary);
+    transform: skew(-12deg);
 }
 
 @media only screen and (max-width: 800px) {
-    :root  {
+    :root {
         --fsize-title: 65px;
     }
 

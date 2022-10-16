@@ -6,7 +6,7 @@
     let projects = projectsJSON.projects;
 </script>
 
-<main id="projects">
+<main class="section" id="projects">
     <span id="dot" />
 
     <div id="title-block">

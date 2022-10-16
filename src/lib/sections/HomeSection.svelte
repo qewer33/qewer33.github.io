@@ -5,7 +5,7 @@
     import reddit from "/src/assets/svg/reddit.svg";
 </script>
 
-<main>
+<main class="section" id="home">
     <span id="dot" />
 
     <div id="title-block">
@@ -21,10 +21,24 @@
             <li>linux enthusiast</li>
         </ul>
 
-        <div class="button" data-animate><a href="#projects">PROJECTS</a></div>
+        <div style="display: flex;">
+            <a class="button" data-animate href="#projects">PROJECTS</a>
+            <a
+                class="button"
+                data-animate
+                style="background-color: var(--accent-pink);"
+                href="https://ko-fi.com/qewer"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                ♥ DONATE
+            </a>
+        </div>
 
         <div id="title-socials" data-animate>
-            <a href="https://github.com/qewer33"><img src={github} alt="github" /></a>
+            <a href="https://github.com/qewer33" target="_blank" rel="noopener noreferrer">
+                <img src={github} alt="github" />
+            </a>
             <span
                 ><img
                     src={discord}
@@ -60,7 +74,9 @@
                     }}
                 /></span
             >
-            <a href="https://www.reddit.com/user/qewer3333"><img src={reddit} alt="reddit" /></a>
+            <a href="https://www.reddit.com/user/qewer3333" target="_blank" rel="noopener noreferrer">
+                <img src={reddit} alt="reddit" />
+            </a>
         </div>
     </div>
 
@@ -195,7 +211,7 @@
     }
 
     .button {
-        width: 100px;
+        margin-right: 20px;
     }
 
     @media only screen and (max-width: 800px) {

@@ -10,17 +10,25 @@
         <div id="text">
             <p>
                 this website is designed by
-                <a href="https://lynithdev.github.io">lynith</a>
+                <a href="https://lynithdev.github.io" target="_blank" rel="noopener noreferrer">lynith</a>
                 and developed by
-                <a href="https://github.com/qewer33">me (qewer)</a>
+                <a href="https://github.com/qewer33" target="_blank" rel="noopener noreferrer">me (qewer)</a>
             </p>
             <p>
                 you can find the source code
-                <a href="https://github.com/qewer33/qewer33.github.io">here on github</a>
+                <a href="https://github.com/qewer33/qewer33.github.io" target="_blank" rel="noopener noreferrer">
+                    here on github
+                </a>
             </p>
             <p>
                 licensed under the
-                <a href="https://www.gnu.org/licenses/gpl-3.0.en.html"> gplv3 free software license </a>
+                <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank" rel="noopener noreferrer">
+                    gplv3 free software license
+                </a>
+            </p>
+            <p>
+                if you like my work, please consider
+                <a href="https://ko-fi.com/qewer" target="_blank" rel="noopener noreferrer"> donating </a>
             </p>
         </div>
     </div>
@@ -61,6 +69,7 @@
 
     p {
         color: var(--text-secondary);
+        margin-top: 3px;
     }
 
     p,
