@@ -15,7 +15,7 @@
     </div>
 
     <div id="cards">
-        {#each projects as project, i}
+        {#each projects as project}
             <ProjectCard
                 thumbnailImage={project.thumbnailImage}
                 thumbnailScale={project.thumbnailScale}

@@ -9,11 +9,11 @@
     <span id="dot" />
 
     <div id="title-block">
-        <p id="title-hi" data-animate>
+        <p id="title-hi" class="animate fade left">
             <span style="color: var(--accent-primary);">HI</span> THERE! I'M
         </p>
-        <p id="title-name" data-animate>qewer</p>
-        <p id="title-aka" data-animate>aka. qewer33, qewer3322, qewer3333</p>
+        <p id="title-name" class="animate fade left">qewer</p>
+        <p id="title-aka" class="animate fade left">aka. qewer33, qewer3322, qewer3333</p>
 
         <ul id="title-list" data-animate>
             <li>developer</li>
@@ -148,7 +148,7 @@
         width: 40px;
         height: 40px;
         position: absolute;
-        left: calc(50vw - 20px);
+        left: calc(50% - 20px);
         bottom: 50px;
         animation: scroll-img-anim 2s ease-in-out infinite;
     }
