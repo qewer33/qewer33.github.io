@@ -9,11 +9,11 @@
     <span id="dot" />
 
     <div id="title-block">
-        <p id="title-hi" class="animate fade left">
+        <p id="title-hi" data-animate>
             <span style="color: var(--accent-primary);">HI</span> THERE! I'M
         </p>
-        <p id="title-name" class="animate fade left">qewer</p>
-        <p id="title-aka" class="animate fade left">aka. qewer33, qewer3322, qewer3333</p>
+        <p id="title-name" data-animate>qewer</p>
+        <p id="title-aka" data-animate>aka. qewer33, qewer3322, qewer3333</p>
 
         <ul id="title-list" data-animate>
             <li>developer</li>
