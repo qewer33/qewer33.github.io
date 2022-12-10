@@ -46,7 +46,6 @@
     #progress-bar-bg {
         width: 100%;
         height: 15px;
-        border-radius: 999px;
         margin-top: 15px;
         margin-bottom: 5px;
         background-color: var(--background-primary);
@@ -54,7 +53,6 @@
 
     #progress-bar-fg {
         height: 100%;
-        border-radius: 999px;
         background-color: var(--accent-primary);
         box-shadow: 0 0 5px var(--accent-primary);
     }

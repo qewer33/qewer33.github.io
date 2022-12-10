@@ -25,10 +25,18 @@
             "language": "QML"
         },
         {
+            "name": "qewer's URL Shortener",
+            "description": "A simple URL shortener, built with Rust and Cloudflare Workers",
+            "thumbnailImage": "https://raw.githubusercontent.com/qewer33/cloudflare-url-shortener/main/assets/screenshot.png",
+            "thumbnailScale": "0.4",
+            "url": "https://github.com/qewer33/cloudflare-url-shortener",
+            "language": "Rust"
+        },
+        {
             "name": "ascii_table_creator_3000",
             "description": "An interactive Ruby program that allows you to create text tables right in your terminal!",
             "thumbnailImage": "/static_assets/png/ascii_table_creator_3000.png",
-            "thumbnailScale": "1.2",
+            "thumbnailScale": "1.1",
             "url": "https://github.com/qewer33/ascii_table_creator_3000",
             "language": "Ruby"
         },
