@@ -21,7 +21,7 @@
             <li>linux enthusiast</li>
         </ul>
 
-        <div style="display: flex;">
+        <div style="display: flex; flex-wrap: wrap;">
             <a class="button" data-animate href="#projects">PROJECTS</a>
             <a
                 class="button"
@@ -223,6 +223,14 @@
 
         #title-block {
             margin-left: 0;
+            width: 85%;
+        }
+
+        .button {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 15px;
+            margin-right: 0;
         }
 
         #dot,

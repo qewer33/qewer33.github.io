@@ -35,7 +35,7 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        margin-left: 12px;
+        margin-bottom: -10px;
         transition: 250ms;
     }
 
@@ -75,6 +75,12 @@
     @media only screen and (max-width: 800px) {
         main {
             transform: none;
+            padding: 10px;
+        }
+
+        #content {
+            margin-left: 0;
+            margin-bottom: 0;
         }
 
         h1 {
