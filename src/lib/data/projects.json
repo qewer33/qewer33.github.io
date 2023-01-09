@@ -25,6 +25,14 @@
             "language": "QML"
         },
         {
+            "name": "WickedRPS",
+            "description": "A battlefield of rocks, papers and scissors. Set up the scene and let them fight! My take on \"Living RPS\". Click the visit button to play in your browser",
+            "thumbnailImage": "https://github.com/qewer33/WickedRPS/blob/main/assets/screenshot.png?raw=true",
+            "thumbnailScale": "0.35",
+            "url": "https://rps.qewer.dev",
+            "language": "p5.js"
+        },
+        {
             "name": "qewer's URL Shortener",
             "description": "A simple URL shortener, built with Rust and Cloudflare Workers",
             "thumbnailImage": "https://raw.githubusercontent.com/qewer33/cloudflare-url-shortener/main/assets/screenshot.png",

@@ -11,6 +11,8 @@
         <div style="background-color: #4B872F;" />
     {:else if language.toLowerCase() === "svelte"}
         <div style="background-color: #ff4500;" />
+    {:else if language.toLowerCase() === "p5.js"}
+        <div style="background-color: #C53B70;" />
     {:else}
         <div style="background-color: #999999;" />
     {/if}
