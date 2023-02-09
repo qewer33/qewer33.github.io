@@ -18,7 +18,7 @@
         <ul id="title-list" data-animate>
             <li>developer</li>
             <li>designer</li>
-            <li>linux enthusiast</li>
+            <li>computer enthusiast</li>
         </ul>
 
         <div style="display: flex; flex-wrap: wrap;">
