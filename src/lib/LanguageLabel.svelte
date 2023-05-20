@@ -13,6 +13,8 @@
         <div style="background-color: #ff4500;" />
     {:else if language.toLowerCase() === "p5.js"}
         <div style="background-color: #C53B70;" />
+    {:else if language.toLowerCase() === "python"}
+        <div style="background-color: #FFC13A;" />
     {:else}
         <div style="background-color: #999999;" />
     {/if}
