@@ -1,25 +1,25 @@
 <script>
     export let language = "";
+
+    const languages = {
+        default: "#999999",
+        rust: "#A58060",
+        ruby: "#AE2828",
+        qml: "#4B872F",
+        svelte: "#ff4500",
+        "p5.js": "#C53B70",
+        python: "#FFC13A",
+        html: "#D84923",
+    };
+
+    function getLanguageColor() {
+        if (language.toLowerCase() in languages) return languages[language.toLowerCase()];
+        else return languages.default;
+    }
 </script>
 
 <main>
-    {#if language.toLowerCase() === "rust"}
-        <div style="background-color: #A58060;" />
-    {:else if language.toLowerCase() === "ruby"}
-        <div style="background-color: #AE2828;" />
-    {:else if language.toLowerCase() === "qml"}
-        <div style="background-color: #4B872F;" />
-    {:else if language.toLowerCase() === "svelte"}
-        <div style="background-color: #ff4500;" />
-    {:else if language.toLowerCase() === "p5.js"}
-        <div style="background-color: #C53B70;" />
-    {:else if language.toLowerCase() === "python"}
-        <div style="background-color: #FFC13A;" />
-    {:else if language.toLowerCase() === "html"}
-        <div style="background-color: #D84923;" />
-    {:else}
-        <div style="background-color: #999999;" />
-    {/if}
+    <div style="background-color: {getLanguageColor()};" />
     <p>{language.toUpperCase()}</p>
 </main>
 
