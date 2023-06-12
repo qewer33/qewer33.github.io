@@ -1,0 +1,12 @@
+{
+    "commissions": [
+        {
+            "name": "Hawmi's Personal Portfolio",
+            "description": "Simple personal portfolio website for a friend",
+            "thumbnailImage": "/static_assets/png/hawmi_bio.png",
+            "thumbnailScale": "0.3",
+            "url": "https://hawmi.bio",
+            "language": "HTML"
+        }
+    ]
+}

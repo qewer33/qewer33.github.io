@@ -15,6 +15,8 @@
         <div style="background-color: #C53B70;" />
     {:else if language.toLowerCase() === "python"}
         <div style="background-color: #FFC13A;" />
+    {:else if language.toLowerCase() === "html"}
+        <div style="background-color: #D84923;" />
     {:else}
         <div style="background-color: #999999;" />
     {/if}

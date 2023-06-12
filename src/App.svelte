@@ -1,6 +1,7 @@
 <script>
     import HomeSection from "./lib/sections/HomeSection.svelte";
     import ProjectsSection from "./lib/sections/ProjectsSection.svelte";
+    import CommissionsSection from "./lib/sections/CommissionsSection.svelte";
     import SkillsSection from "./lib/sections/SkillsSection.svelte";
     import FooterSection from "./lib/sections/FooterSection.svelte";
     import { onMount } from "svelte";
@@ -24,6 +25,7 @@
 <main>
     <HomeSection />
     <ProjectsSection />
+    <CommissionsSection />
     <SkillsSection />
     <FooterSection />
 </main>
