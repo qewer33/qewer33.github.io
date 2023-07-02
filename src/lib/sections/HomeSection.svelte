@@ -27,6 +27,7 @@
                 class="button"
                 data-animate
                 style="background-color: var(--accent-pink);"
+                id="donate-button"
                 href="https://ko-fi.com/qewer"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -212,6 +213,24 @@
 
     .button {
         margin-right: 20px;
+    }
+
+    #donate-button::before {
+        width: 0%;
+        height: 100%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        background: #eb6299;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        transition: all 0.6s ease;
+    }
+
+    #donate-button:hover::before {
+        width: 100%;
     }
 
     @media only screen and (max-width: 800px) {
