@@ -10,6 +10,7 @@
         "p5.js": "#C53B70",
         python: "#FFC13A",
         html: "#D84923",
+        "C++": "#C53B70",
     };
 
     function getLanguageColor() {

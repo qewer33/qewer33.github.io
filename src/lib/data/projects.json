@@ -1,6 +1,14 @@
 {
     "projects": [
         {
+            "name": "qpaperOS",
+            "description": "Smartwatch firmware for LILYGO T-Wrist E-Paper along with 3D models for a sleek watch case",
+            "thumbnailImage": "/static_assets/png/qpaperos.png",
+            "thumbnailScale": "0.37",
+            "url": "https://github.com/qewer33/qpaperos",
+            "language": "C++"
+        },
+        {
             "name": "Exquisite",
             "description": "A new, unique and intuitive window management solution for KDE Plasma!",
             "thumbnailImage": "/static_assets/png/exquisite.png",

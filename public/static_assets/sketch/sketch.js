@@ -12,9 +12,9 @@ function setup() {
 }
 
 function draw() {
-    background(30, 200);
+    background(30, 220);
     backgroundSystem.display(0, width, 0, height);
-    backgroundSystem2.display(0, width, 0, height);
+    // backgroundSystem2.display(0, width, 0, height);
     if (windowWidth > 800) {
         fill(40, 150);
         noStroke();
