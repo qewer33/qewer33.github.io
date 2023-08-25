@@ -3,7 +3,7 @@ let backgroundSystem2;
 let mouseSystem;
 
 function setup() {
-    canvas = createCanvas(windowWidth, windowHeight);
+    canvas = createCanvas(windowWidth, windowHeight, WEBGL);
     canvas.style('z-index', '-1');
 
     backgroundSystem = new ParticleSystem(10, color(10, 150, 190, 35));
@@ -13,8 +13,9 @@ function setup() {
 
 function draw() {
     background(30, 220);
+    translate(-windowWidth/2, -windowHeight/2, 0);
     backgroundSystem.display(0, width, 0, height);
-    // backgroundSystem2.display(0, width, 0, height);
+    backgroundSystem2.display(0, width, 0, height);
     if (windowWidth > 800) {
         fill(40, 150);
         noStroke();
