@@ -17,9 +17,9 @@
     --text-secondary: #ffffff83;
 
     --fsize-title: 65px;
-    --fsize-text-heading: 24px;
+    --fsize-text-heading: 25px;
     --fsize-text-subheading: 20px;
-    --fsize-text-body: 15px;
+    --fsize-text-body: 16px;
     --fsize-text-small: 12px;
 
     --accent-pink: #c53b70;
@@ -54,6 +54,7 @@ h1 {
     margin: 0;
     padding: 0;
     color: var(--text-primary);
+    font-size: var(--fsize-text-body);
 }
 
 h1 {
@@ -73,7 +74,6 @@ a:hover {
 .button {
     padding: 15px 30px;
     font-family: "JetBrains Mono";
-    font-size: var(--fsize-text-body);
     font-weight: 800;
     letter-spacing: 3px;
     color: var(--text-primary);
@@ -93,7 +93,6 @@ a:hover {
     cursor: pointer;
     color: var(--text-primary);
     background-color: var(--accent-secondary);
-    transform: skew(-12deg);
 }
 
 @media only screen and (max-width: 800px) {

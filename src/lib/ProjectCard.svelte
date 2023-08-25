@@ -91,7 +91,6 @@
     }
 
     p {
-        font-size: var(--fsize-text-body);
         margin-bottom: 20px;
     }
 
