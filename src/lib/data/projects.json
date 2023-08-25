@@ -4,7 +4,7 @@
             "name": "qpaperOS",
             "description": "Smartwatch firmware for LILYGO T-Wrist E-Paper along with 3D models for a sleek watch case",
             "thumbnailImage": "/static_assets/png/qpaperos.png",
-            "thumbnailScale": "0.37",
+            "thumbnailScale": "0.3",
             "url": "https://github.com/qewer33/qpaperos",
             "language": "C++"
         },
@@ -12,7 +12,7 @@
             "name": "Exquisite",
             "description": "A new, unique and intuitive window management solution for KDE Plasma!",
             "thumbnailImage": "/static_assets/png/exquisite.png",
-            "thumbnailScale": "0.6",
+            "thumbnailScale": "0.5",
             "url": "https://github.com/qewer33/Exquisite",
             "language": "QML"
         },
@@ -20,7 +20,7 @@
             "name": "Leaf KDE Plasma Theme",
             "description": "Leaf is a comfy, forest themed, green accent light & dark theme set for your KDE Plasma desktop",
             "thumbnailImage": "/static_assets/png/leaf.png",
-            "thumbnailScale": "0.35",
+            "thumbnailScale": "0.3",
             "url": "https://github.com/qewer33/leaf-kde",
             "language": ""
         },
@@ -28,7 +28,7 @@
             "name": "Clear Clock",
             "description": "ClearClock is a simple, elegant and configurable date/time display for your KDE Plasma desktop",
             "thumbnailImage": "/static_assets/png/clear_clock.png",
-            "thumbnailScale": "0.95",
+            "thumbnailScale": "0.9",
             "url": "https://github.com/qewer33/ClearClock",
             "language": "QML"
         },
@@ -36,7 +36,7 @@
             "name": "WickedRPS",
             "description": "A battlefield of rocks, papers and scissors. Set up the scene and let them fight! My take on \"Living RPS\". Click the visit button to play in your browser",
             "thumbnailImage": "https://github.com/qewer33/WickedRPS/blob/main/assets/screenshot.png?raw=true",
-            "thumbnailScale": "0.35",
+            "thumbnailScale": "0.3",
             "url": "https://rps.qewer.dev",
             "language": "p5.js"
         },
@@ -44,7 +44,7 @@
             "name": "image_collage_filter.py",
             "description": "A python script to create photo mosaics!",
             "thumbnailImage": "/static_assets/png/image_collage_filter.png",
-            "thumbnailScale": "0.58",
+            "thumbnailScale": "0.5",
             "url": "https://github.com/qewer33/image-collage-filter",
             "language": "Python"
         },
@@ -52,7 +52,7 @@
             "name": "qewer's URL Shortener",
             "description": "A simple URL shortener, built with Rust and Cloudflare Workers",
             "thumbnailImage": "https://raw.githubusercontent.com/qewer33/cloudflare-url-shortener/main/assets/screenshot.png",
-            "thumbnailScale": "0.4",
+            "thumbnailScale": "0.35",
             "url": "https://github.com/qewer33/cloudflare-url-shortener",
             "language": "Rust"
         },
@@ -60,7 +60,7 @@
             "name": "sus runner",
             "description": "A Chrome dino game clone, except it's kinda sus... Made with Rust and Macroquad to try out gamedev in Rust",
             "thumbnailImage": "/static_assets/png/sus_runner.png",
-            "thumbnailScale": "1.4",
+            "thumbnailScale": "1.3",
             "url": "https://sus.qewer.dev/",
             "language": "Rust"
         },
@@ -68,7 +68,7 @@
             "name": "This Website",
             "description": "This website is designed by Lynith and developed from scratch by me using Svelte and p5.js",
             "thumbnailImage": "/static_assets/png/website.png",
-            "thumbnailScale": "0.35",
+            "thumbnailScale": "0.3",
             "url": "https://github.com/qewer33/personal-website",
             "language": "Svelte"
         }

@@ -16,11 +16,11 @@
     --text-primary: #ffffff;
     --text-secondary: #ffffff83;
 
-    --fsize-title: 68px;
-    --fsize-text-heading: 26px;
-    --fsize-text-subheading: 22px;
-    --fsize-text-body: 17px;
-    --fsize-text-small: 14px;
+    --fsize-title: 65px;
+    --fsize-text-heading: 24px;
+    --fsize-text-subheading: 20px;
+    --fsize-text-body: 15px;
+    --fsize-text-small: 12px;
 
     --accent-pink: #c53b70;
 
@@ -54,6 +54,10 @@ h1 {
     margin: 0;
     padding: 0;
     color: var(--text-primary);
+}
+
+h1 {
+    font-size: var(--fsize-text-heading);
 }
 
 a {
@@ -94,7 +98,7 @@ a:hover {
 
 @media only screen and (max-width: 800px) {
     :root {
-        --fsize-title: 65px;
+        --fsize-title: 52px;
     }
 
     button {

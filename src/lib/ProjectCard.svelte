@@ -29,15 +29,19 @@
     main {
         display: flex;
         flex-wrap: wrap;
-        width: 500px;
-        height: 250px;
+        width: 410px;
+        height: 225px;
         margin-right: 30px;
         margin-top: 30px;
         background-color: var(--background-secondary);
         padding: 20px;
         transform: skew(-5deg);
         overflow: hidden;
-        border: 2px solid var(--background-secondary);
+        border: 3px solid var(--background-secondary);
+    }
+
+    main:hover {
+        border: 3px solid var(--accent-primary);
     }
 
     main:hover > img,
