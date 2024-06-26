@@ -53,10 +53,12 @@
             "name": "Computer Aided Design & 3D Printing",
             "knowledgeLevel": 45,
             "labels": [
+                "creality k1c",
+                "orca",
+                "cura",
                 "freecad",
                 "openscad",
-                "kicad",
-                "cura"
+                "kicad"
             ]
         },
         {
