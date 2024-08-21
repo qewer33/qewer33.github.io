@@ -27,7 +27,7 @@
     <HomeSection />
     <AboutSection />
     <ProjectsSection />
-    <CommissionsSection />
+    <!-- <CommissionsSection /> -->
     <SkillsSection />
     <FooterSection />
 </main>
