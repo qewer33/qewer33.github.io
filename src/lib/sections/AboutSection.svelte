@@ -7,15 +7,33 @@
     </div>
 
     <ul id="about-list">
-        <li>I am a university student, studying Computer Engineering.</li>
-        <li>I am bilingual, speaking fluent 🇬🇧 English and my native language 🇹🇷 Turkish. I am also currently learning 🇩🇪 German.</li>
-        <li>I thoroughly enjoy 🖥️ computers, 🔧 engineering and 📝 scientific research. </li>
-        <li>I enjoy contributing to free and open source software (FOSS) projects and getting involved in their communities.</li>
-        <li>As a developer, I maintain a few small-scale open source projects and I also open source my experimental software and hardware projects. </li>
-        <li>I have a keen eye on 🎨 graphic design. I enjoy software UI/UX research. </li>
-        <li>I have knowledge in subjects related to other engineering areas such as ⚡ electronics and PCB design, ⚙️ mechanical CAD and 3D printing, 🪵 woodworking and whittling etc. </li>
-        <li>For more info, also check out my <a href="#projects">projects</a> and <a href="#skills">skills and interest</a>.</li>
-        <li>If you wish to contact me, you can send an 📧 email to <a href="mailto:qewer@qewer.dev">qewer@qewer.dev</a>. You can also contact me via Discord (@qewer33) or Reddit (u/qewer3333).</li>
+        <li data-animate>I am a university student, studying Computer Engineering.</li>
+        <li data-animate>
+            I am bilingual, speaking fluent 🇬🇧 English and my native language 🇹🇷 Turkish. I am also currently learning
+            🇩🇪 German.
+        </li>
+        <li data-animate>I thoroughly enjoy 🖥️ computers, 🔧 engineering and 📝 scientific research.</li>
+        <li data-animate>
+            I enjoy contributing to free and open source software (FOSS) projects and getting involved in their
+            communities.
+        </li>
+        <li data-animate>
+            As a developer, I maintain a few small-scale open source projects and I also open source my experimental
+            software and hardware projects.
+        </li>
+        <li data-animate>I have a keen eye on 🎨 graphic design. I enjoy software UI/UX research.</li>
+        <li data-animate>
+            I am also interested and have knowledge in subjects related to other engineering areas such as ⚡
+            electronics and PCB design, ⚙️ mechanical CAD and 3D printing, 🪵 woodworking and whittling etc.
+        </li>
+        <li data-animate>
+            For more info, check out my <a href="#projects">projects</a> and
+            <a href="#skills">skills and interests</a>.
+        </li>
+        <li data-animate>
+            If you wish to contact me, you can send an 📧 email to <a href="mailto:qewer@qewer.dev">qewer@qewer.dev</a>.
+            You can also contact me via Discord (@qewer33) or Reddit (u/qewer3333).
+        </li>
     </ul>
 </main>
 
