@@ -1,5 +1,6 @@
 <script>
     import HomeSection from "./lib/sections/HomeSection.svelte";
+    import AboutSection from "./lib/sections/AboutSection.svelte";
     import ProjectsSection from "./lib/sections/ProjectsSection.svelte";
     import CommissionsSection from "./lib/sections/CommissionsSection.svelte";
     import SkillsSection from "./lib/sections/SkillsSection.svelte";
@@ -24,6 +25,7 @@
 
 <main>
     <HomeSection />
+    <AboutSection />
     <ProjectsSection />
     <CommissionsSection />
     <SkillsSection />

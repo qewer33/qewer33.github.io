@@ -69,7 +69,6 @@
         flex-wrap: wrap;
         max-width: 100%;
         margin-left: 75px;
-        margin-bottom: 200px;
     }
 
     @media only screen and (max-width: 800px) {

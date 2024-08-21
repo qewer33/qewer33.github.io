@@ -21,7 +21,7 @@
                 thumbnailScale={project.thumbnailScale}
                 visitURL={project.url}
                 language={project.language}
-            >
+            >Cannot find package 'svelte-preprocess
                 <span slot="title">{project.name}</span>
 
                 <span slot="description">{project.description}</span>
@@ -70,7 +70,7 @@
         flex-wrap: wrap;
         max-width: 100%;
         margin-left: 75px;
-        margin-bottom: 200px;
+        margin-bottom: 100px;
     }
 
     @media only screen and (max-width: 800px) {
