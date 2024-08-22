@@ -73,7 +73,7 @@
     }
 
     #about-list {
-        max-width: 100%;
+        max-width: 75%;
         margin-left: 75px;
         margin-bottom: 100px;
     }
@@ -81,13 +81,14 @@
     #about-list li {
         font-size: var(--fsize-text-subheading);
         color: var(--text-primary);
-        margin-bottom: 15px;
-        padding-left: 5px;
+        margin-bottom: 20px;
+        padding-left: 10px;
     }
 
     #about-list li::marker {
         color: var(--accent-primary);
         content: "◆";
+        font-size: 0.75em;
     }
 
     @media only screen and (max-width: 800px) {
@@ -101,10 +102,11 @@
             padding: 20px;
         }
 
-        #cards {
+        #about-list {
             margin-left: 25px;
             align-items: center;
             justify-content: center;
+            max-width: 90%;
         }
 
         #dot {

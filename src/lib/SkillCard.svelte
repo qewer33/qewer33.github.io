@@ -7,11 +7,11 @@
         <h1><slot name="title" /></h1>
         <div id="progress-bar-bg">
             <div id="progress-bar-fg" style="width: {knowledgeLevel}%;" />
-        </div>
-        <div id="progress-bar-labels">
-            <p style="text-align: left;">BEGINNER</p>
-            <p style="text-align: center;">INTERMEDIATE</p>
-            <p style="text-align: right;">ADVANCED</p>
+            <div id="progress-bar-labels">
+                <p style="text-align: left;">BEGINNER</p>
+                <p style="text-align: center;">INTERMEDIATE</p>
+                <p style="text-align: right;">ADVANCED</p>
+            </div>
         </div>
         <div id="labels"><slot name="labels" /></div>
     </div>
@@ -45,7 +45,7 @@
 
     #progress-bar-bg {
         width: 100%;
-        height: 15px;
+        height: 20px;
         margin-top: 15px;
         margin-bottom: 5px;
         background-color: var(--background-primary);
@@ -58,12 +58,16 @@
     }
 
     #progress-bar-labels {
+        position: relative;
+        top: -17px;
         display: flex;
     }
 
     #progress-bar-labels p {
         color: var(--text-secondary);
+        font-size: var(--fsize-text-small);
         flex: 1;
+        margin: 0 5px;
     }
 
     #labels {
