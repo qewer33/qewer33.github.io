@@ -7,7 +7,7 @@
     </div>
 
     <ul id="about-list">
-        <li data-animate>I am a university student, studying Computer Engineering.</li>
+        <li data-animate>I am a 🎓 university student, studying Computer Engineering.</li>
         <li data-animate>
             I am bilingual, speaking fluent 🇬🇧 English and my native language 🇹🇷 Turkish. I am also currently learning
             🇩🇪 German.

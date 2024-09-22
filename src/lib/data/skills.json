@@ -17,6 +17,7 @@
             "name": "Linux & Free Software",
             "knowledgeLevel": 85,
             "labels": [
+                "fedora",
                 "arch linux",
                 "kde",
                 "bash"
