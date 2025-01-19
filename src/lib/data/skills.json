@@ -5,8 +5,9 @@
             "knowledgeLevel": 85,
             "labels": [
                 "rust",
+                "c",
+                "c++",
                 "python",
-                "ruby",
                 "bash",
                 "qml",
                 "neovim",
@@ -24,8 +25,29 @@
             ]
         },
         {
-            "name": "Graphic Design & UI/UX",
+            "name": "Embedded Systems, Electronics & PCB Design",
             "knowledgeLevel": 65,
+            "labels": [
+                "esp32",
+                "atmel & arduino",
+                "risc-v",
+                "kicad"
+            ]
+        },
+        {
+            "name": "Computer Aided Design & 3D Printing",
+            "knowledgeLevel": 65,
+            "labels": [
+                "creality k1c",
+                "orca",
+                "cura",
+                "freecad",
+                "openscad"
+            ]
+        },
+        {
+            "name": "Graphic Design & UI/UX",
+            "knowledgeLevel": 55,
             "labels": [
                 "figma",
                 "inkscape",
@@ -34,39 +56,12 @@
         },
         {
             "name": "Web Development",
-            "knowledgeLevel": 55,
+            "knowledgeLevel": 45,
             "labels": [
                 "html",
                 "css",
                 "javascript",
                 "svelte"
-            ]
-        },
-        {
-            "name": "Computer Graphics & Creative Coding",
-            "knowledgeLevel": 50,
-            "labels": [
-                "processing",
-                "p5.js"
-            ]
-        },
-        {
-            "name": "Computer Aided Design & 3D Printing",
-            "knowledgeLevel": 45,
-            "labels": [
-                "creality k1c",
-                "orca",
-                "cura",
-                "freecad",
-                "openscad",
-                "kicad"
-            ]
-        },
-        {
-            "name": "Game Development",
-            "knowledgeLevel": 35,
-            "labels": [
-                "godot"
             ]
         },
         {
