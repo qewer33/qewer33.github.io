@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zikir Hesaplayıcı</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: white;
+        }
+        .container {
+            padding: 2rem;
+            width: 100%;
+            max-width: 600px;
+        }
+        h2 {
+            margin-top: 0;
+            color: #333;
+            text-align: center;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: monospace;
+            box-sizing: border-box; /* Ensures padding doesn't widen element */
+            resize: vertical;
+        }
+        textarea:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            margin-top: 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .results {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 2px dashed #eee;
+        }
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        .result-value {
+            font-size: 30px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .highlight {
+            color: #d9534f;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Zikir Hesaplayıcı</h2>
+    <p style="text-align:center; color:#666; font-size:0.9rem;">Girdiyi aşağıya yapıştır:</p>
+    
+    <textarea id="inputData" placeholder="Örn: 41.575+3000+..."></textarea>
+    
+    <button onclick="calculate()">Hesapla</button>
+
+    <div class="results" id="resultSection" style="display:none;">
+        <div class="result-item">
+            <span>Toplam:</span>
+            <span class="result-value" id="totalSum">0</span>
+        </div>
+        <div class="result-item">
+            <span>70.000 Sayısı:</span>
+            <span class="result-value highlight" id="count70k">0</span>
+        </div>
+        <div class="result-item">
+            <span>Kalan:</span>
+            <span class="result-value highlight" id="remainder">0</span>
+        </div>
+    </div>
+</div>
+
+<script>
+    function calculate() {
+        const input = document.getElementById('inputData').value;
+
+        // 1. Remove all dots (.), newlines, and spaces
+        // We leave the '+' signs to split by later
+        let cleanStr = input.replace(/\./g, '')  // Remove dots
+                            .replace(/\n/g, '')  // Remove newlines
+                            .replace(/\r/g, '')  // Remove carriage returns
+                            .replace(/\s/g, ''); // Remove spaces
+
+        // 2. Split by '+' to get individual numbers
+        const parts = cleanStr.split('+');
+
+        let total = 0;
+
+        // 3. Loop through parts and add them up
+        for (let part of parts) {
+            // If the part is empty (e.g. trailing +), ignore it
+            if (part === "") continue;
+
+            const num = parseInt(part, 10);
+            if (!isNaN(num)) {
+                total += num;
+            }
+        }
+
+        // 4. Calculate 70,000 logic
+        const divisor = 70000;
+        const count = Math.floor(total / divisor);
+        const rem = total % divisor;
+
+        // 5. Update UI
+        document.getElementById('totalSum').innerText = total.toLocaleString(); // Adds commas for readability
+        document.getElementById('count70k').innerText = count;
+        document.getElementById('remainder').innerText = rem.toLocaleString();
+        
+        document.getElementById('resultSection').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
