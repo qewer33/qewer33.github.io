@@ -1,6 +1,22 @@
 {
     "projects": [
         {
+            "name": "qron0b",
+            "description": "A sleek and minimalist low-power binary wristwatch",
+            "thumbnailImage": "/static_assets/png/qron0b.png",
+            "thumbnailScale": "0.3",
+            "url": "https://github.com/qewer33/qron0b",
+            "language": "C"
+        },
+        {
+            "name": "Quetite",
+            "description": "A modern and comfy interpreted scripting language",
+            "thumbnailImage": "/static_assets/png/quetite.png",
+            "thumbnailScale": "0.32",
+            "url": "https://github.com/qewer33/quetite",
+            "language": "Rust"
+        },
+        {
             "name": "qpaperOS",
             "description": "Smartwatch firmware for LILYGO T-Wrist E-Paper along with 3D models for a sleek watch case",
             "thumbnailImage": "/static_assets/png/qpaperos.png",
@@ -41,27 +57,11 @@
             "language": "p5.js"
         },
         {
-            "name": "image_collage_filter.py",
-            "description": "A python script to create photo mosaics!",
-            "thumbnailImage": "/static_assets/png/image_collage_filter.png",
-            "thumbnailScale": "1",
-            "url": "https://github.com/qewer33/image-collage-filter",
-            "language": "Python"
-        },
-        {
             "name": "qewer's URL Shortener",
             "description": "A simple URL shortener, built with Rust and Cloudflare Workers",
             "thumbnailImage": "/static_assets/png/url_shortener.png",
             "thumbnailScale": "01",
             "url": "https://github.com/qewer33/cloudflare-url-shortener",
-            "language": "Rust"
-        },
-        {
-            "name": "sus runner",
-            "description": "A Chrome dino game clone, except it's kinda sus... Made with Rust and Macroquad to try out gamedev in Rust",
-            "thumbnailImage": "/static_assets/png/sus_runner.png",
-            "thumbnailScale": "1.3",
-            "url": "https://sus.qewer.dev/",
             "language": "Rust"
         },
         {
