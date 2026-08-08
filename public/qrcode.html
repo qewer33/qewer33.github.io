@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            padding: 2rem;
+            width: 100%;
+            max-width: 600px;
+        }
+        h2 {
+            margin-top: 0;
+            color: #333;
+            text-align: center;
+        }
+        p.subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        textarea {
+            width: 100%;
+            height: 120px;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: monospace;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+        textarea:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            margin-top: 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button:disabled {
+            background-color: #b0b0b0;
+            cursor: not-allowed;
+        }
+        .qr-output {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 2px dashed #eee;
+            text-align: center;
+        }
+        .qr-output img {
+            width: 256px;
+            height: 256px;
+            image-rendering: pixelated;
+            border: 1px solid #eee;
+            border-radius: 8px;
+        }
+        .actions {
+            display: flex;
+            gap: 10px;
+        }
+        .actions button {
+            flex: 1;
+        }
+        .secondary {
+            background-color: #6c757d;
+        }
+        .secondary:hover {
+            background-color: #545b62;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>QR Code Generator</h2>
+    <p class="subtitle">Enter text or a URL and generate a QR code:</p>
+
+    <textarea id="inputData" placeholder="https://example.com"></textarea>
+
+    <button onclick="generate()">Generate</button>
+
+    <div class="qr-output" id="output" style="display:none;">
+        <img id="qrImage" alt="QR Code">
+        <div class="actions">
+            <button onclick="download()">Download</button>
+            <button class="secondary" onclick="copy()">Copy to Clipboard</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    let currentDataUrl = "";
+
+    function generate() {
+        const text = document.getElementById("inputData").value.trim();
+        if (!text) {
+            alert("Please enter some text or a URL.");
+            return;
+        }
+
+        // typeNumber 0 = auto-size, 'M' = medium error correction
+        const qr = qrcode(0, "M");
+        qr.addData(text);
+        qr.make();
+
+        // Render the QR modules onto a canvas so we can export a real PNG.
+        const cellSize = 8;
+        const margin = 4;
+        const count = qr.getModuleCount();
+        const size = (count + margin * 2) * cellSize;
+
+        const canvas = document.createElement("canvas");
+        canvas.width = size;
+        canvas.height = size;
+        const ctx = canvas.getContext("2d");
+
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(0, 0, size, size);
+        ctx.fillStyle = "#000000";
+        for (let row = 0; row < count; row++) {
+            for (let col = 0; col < count; col++) {
+                if (qr.isDark(row, col)) {
+                    ctx.fillRect(
+                        (col + margin) * cellSize,
+                        (row + margin) * cellSize,
+                        cellSize,
+                        cellSize
+                    );
+                }
+            }
+        }
+
+        currentDataUrl = canvas.toDataURL("image/png");
+        document.getElementById("qrImage").src = currentDataUrl;
+        document.getElementById("output").style.display = "block";
+    }
+
+    function download() {
+        if (!currentDataUrl) return;
+        const a = document.createElement("a");
+        a.href = currentDataUrl;
+        a.download = "qrcode.png";
+        a.click();
+    }
+
+    async function copy() {
+        if (!currentDataUrl) return;
+        try {
+            const blob = await (await fetch(currentDataUrl)).blob();
+            await navigator.clipboard.write([
+                new ClipboardItem({ [blob.type]: blob })
+            ]);
+            alert("Copied to clipboard!");
+        } catch (e) {
+            alert("Copy failed. Your browser may not support copying images.");
+        }
+    }
+
+    // Allow Ctrl/Cmd+Enter to generate
+    document.getElementById("inputData").addEventListener("keydown", function (e) {
+        if ((e.ctrlKey || e.metaKey) && e.key === "Enter") generate();
+    });
+</script>
+
+</body>
+</html>
